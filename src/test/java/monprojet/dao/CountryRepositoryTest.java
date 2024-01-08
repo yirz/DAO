@@ -43,4 +43,15 @@ public class CountryRepositoryTest {
         assertEquals(combienDePaysDansLeJeuDeTest, nombre, "On doit trouver 4 pays" );
     }
 
-}
+    @Test
+    void onSaitCalculerlaPop() {
+        assertEquals(countryDAO.calculPop(1), 12);
+    }
+
+    @Test
+    void listePop(){
+        assertEquals(countryDAO.popParPays().size(),3);
+    }
+    }
+
+
